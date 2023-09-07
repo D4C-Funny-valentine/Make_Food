@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// import { useEffect } from "react";
+// import { Alert, BackHandler } from "react-native";
+import AppNavigation from "./src/navigation";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  // useEffect(() => {
+  //   const backAction = () => {
+  //     Alert.alert("Hold on!" , "Are you sure do you want to leave?", [
+  //       {
+  //         text: "Cancel",
+  //         onPress: () => null,
+  //         style: "cancel",
+  //       },
+  //       {
+  //         text: "Yes",onPress: () => BackHandler.exitApp()
+  //       },
+  //     ]);
+  //     return true;
+  //   };
+  //   const backKeyHandler = BackHandler.addEventListener(
+  //     "hardwareBackPress",
+  //     backAction
+  //   );
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  //   return () => backKeyHandler.remove();
+  // }, []);
+  return <AppNavigation />;
+}
